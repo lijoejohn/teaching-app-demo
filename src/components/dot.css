@@ -1,0 +1,7 @@
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+}

@@ -1,0 +1,19 @@
+.menu-item {
+  font-family: "Open Sans", sans-serif;
+  border: 0;
+  display: inline-block;
+  min-width: 85px;
+  color: #7b7d85;
+  font-size: 16px;
+  line-height: 22px;
+  padding-right: 45px;
+}
+.menu-item span {
+  cursor: pointer;
+}
+.menu-item span {
+  cursor: pointer;
+}
+.menu-item span:hover {
+  font-weight: 600;
+}
