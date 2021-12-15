@@ -23,3 +23,21 @@ Container.propTypes = {
 Container.defaultProps = {
   children: undefined,
 };
+export const ChildContainer = ({ children, ...props }) => {
+  return (
+    <div className={"data-child-container"} {...props}>
+      {children}
+    </div>
+  );
+};
+
+ChildContainer.propTypes = {
+  /**
+   * Button contents
+   */
+  children: PropTypes.element,
+};
+
+ChildContainer.defaultProps = {
+  children: undefined,
+};

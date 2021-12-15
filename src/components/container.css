@@ -12,3 +12,14 @@
   padding-left: 100px;
   padding-right: 100px;
 }
+.data-child-container {
+  font-family: "Open Sans", sans-serif;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 30px rgba(155, 155, 155, 0.0530457);
+  border-radius: 4px;
+  width: 100%;
+  min-width: 379px;
+  padding: 24px;
+}

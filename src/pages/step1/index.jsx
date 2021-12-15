@@ -1,4 +1,4 @@
-import { Container } from "../../components/Container";
+import { Container, ChildContainer } from "../../components/Container";
 import { TopHead } from "../../components/TopHead";
 import { MenuItem } from "../../components/MenuItem";
 import { ActionBar } from "../../components/ActionBar";
@@ -10,7 +10,9 @@ import {
   InfoLabel,
 } from "../../components/Typography";
 import { CheckGroup } from "../../components/Checkbox";
-
+import { Infobox } from "../../components/Infobox";
+import { Button } from "../../components/Button";
+import { SelectBox } from "../../components/Select";
 export const Step1 = () => {
   return (
     <div className="container">
@@ -62,7 +64,7 @@ export const Step1 = () => {
       />
       <Heading label="Teaching Services" />
 
-      <Container>
+      <Container style={{ marginBottom: "20px" }}>
         <>
           <SubHeading
             style={{ paddingTop: "40px", paddingBottom: "30px" }}
@@ -145,6 +147,48 @@ export const Step1 = () => {
             style={{ paddingBottom: "20px" }}
             label="Please choose a default hourly rate. Most tutors charge between ₹135 - ₹163 per hour"
           />
+          <Infobox
+            subtitle="₹ 250 - ₹500/hour"
+            title="Exams IIT"
+            style={{ marginBottom: "30px" }}
+          />
+          <Button
+            fullWidth
+            label="Add Rate"
+            onClick={() => {}}
+            style={{ marginBottom: "30px" }}
+          />
+          <ChildContainer style={{ marginBottom: "20px" }}>
+            <SelectBox style={{ paddingBottom: "20px" }} />
+            <SelectBox style={{ paddingBottom: "20px" }} />
+            <div className="sub-button=block" style={{ textAlign: "end" }}>
+              <Button
+                label="Cancel"
+                onClick={() => {}}
+                size="small"
+                style={{ marginRight: "20px" }}
+              />
+              <Button label="Save" onClick={() => {}} primary size="small" />
+            </div>
+          </ChildContainer>
+          <SubHeading
+            style={{ paddingBottom: "10px" }}
+            label="Distance Travelling"
+          />
+          <InfoLabel
+            style={{ paddingBottom: "20px" }}
+            label="How far you willing to travel from your postal code"
+          />
+          <SelectBox style={{ paddingBottom: "100px" }} />
+          <div className="button=block" style={{ paddingBottom: "20px" }}>
+            <Button
+              label="Back"
+              onClick={() => {}}
+              size="large"
+              style={{ marginRight: "20px" }}
+            />
+            <Button label="Next" onClick={() => {}} primary size="large" />
+          </div>
         </>
       </Container>
     </div>

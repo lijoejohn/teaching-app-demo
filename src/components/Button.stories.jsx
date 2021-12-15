@@ -30,3 +30,9 @@ Large.args = {
   primary: true,
   label: "Next",
 };
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  primary: false,
+  label: "Add Rate",
+  fullWidth: true,
+};

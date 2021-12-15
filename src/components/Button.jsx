@@ -1,20 +1,36 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './button.css';
-
+import React from "react";
+import PropTypes from "prop-types";
+import "./button.css";
+import { Icon } from "./Icon";
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
+export const Button = ({
+  primary,
+  backgroundColor,
+  size,
+  label,
+  fullWidth,
+  ...props
+}) => {
+  const mode = primary
+    ? "storybook-button--primary"
+    : "storybook-button--secondary";
+  return !fullWidth ? (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={["storybook-button", `storybook-button--${size}`, mode].join(
+        " "
+      )}
       {...props}
     >
       {label}
     </button>
+  ) : (
+    <div className="full-width-button" {...props}>
+      {label}
+      <Icon color="#5655C6" graphics="plus" height="18px" width="18px" />
+    </div>
   );
 };
 
@@ -26,7 +42,7 @@ Button.propTypes = {
   /**
    * How large should the button be?
    */
-  size: PropTypes.oneOf(['small', 'large']),
+  size: PropTypes.oneOf(["small", "large"]),
   /**
    * Button contents
    */
@@ -35,10 +51,12 @@ Button.propTypes = {
    * Optional click handler
    */
   onClick: PropTypes.func,
+  fullWidth: PropTypes.bool,
 };
 
 Button.defaultProps = {
   primary: false,
-  size: 'small',
+  size: "small",
   onClick: undefined,
+  fullWidth: false,
 };

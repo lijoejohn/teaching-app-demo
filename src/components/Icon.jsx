@@ -167,6 +167,40 @@ export const Icon = ({ width, height, graphics, color }) => {
         />
       </svg>
     );
+  } else if (graphics === "close") {
+    return (
+      <svg
+        width={width}
+        height={height}
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g opacity="0.6">
+          <path
+            d="M12.6668 4.27333L11.7268 3.33333L8.00016 7.06L4.2735 3.33333L3.3335 4.27333L7.06016 8L3.3335 11.7267L4.2735 12.6667L8.00016 8.93999L11.7268 12.6667L12.6668 11.7267L8.94016 8L12.6668 4.27333Z"
+            fill={color}
+          />
+        </g>
+      </svg>
+    );
+  } else if (graphics === "plus") {
+    return (
+      <svg
+        width={width}
+        height={height}
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M8.00665 0V7.96601H0V10.0406H8.00665V18H10.0444V10.0406H18V7.96601H10.0444V0H8.00665Z"
+          fill={color}
+        />
+      </svg>
+    );
   }
 };
 
